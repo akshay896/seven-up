@@ -1,0 +1,43 @@
+.banner {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(to right, rgb(208, 234, 16) 50%, rgb(69, 169, 11) 50%);
+}
+
+.banner .product {
+  /* background-color: red; */
+  width: 5050px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.7s;
+  margin-top: 30px;
+  --left: -390px;
+}
+.banner .product .soda {
+  background: url('./assets/cover-1.jpeg') var(--left) 0, url("./assets/sodacan.png");
+  background-size: auto 100%;
+  width: 152px;
+  height: 400px;
+  background-blend-mode: multiply;
+  mask-image: url('./assets/sodacan.png');
+  mask-size: auto 100%;
+  transition: 0.7s;
+  z-index: 1;
+  
+  
+}
+.banner .product .soda:hover{
+  --left: -1000px;
+}
+.name{
+  position: absolute;
+  font-size: 140px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
